@@ -10,7 +10,7 @@ namespace DataAccess.Concrete.InMemory
 {
     public class InMemoryCarDal : ICarDal
     {
-        new List<Car> _cars;//database
+        List<Car> _cars;//database
         public InMemoryCarDal()
         {
             _cars = new List<Car>

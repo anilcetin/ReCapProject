@@ -12,8 +12,6 @@ using System.Text;
 namespace Business.Concrete
 {
     public class BrandManager : IBrandService
-
-
     {
         IBrandDal _brandDal;
         public BrandManager(IBrandDal brandDal)
@@ -28,7 +26,6 @@ namespace Business.Concrete
                 context.Brands.Add(brand);
                 return new SuccessResult(Messages.BrandAdded);
                 //Console.WriteLine(  "marka eklendi");
-                context.SaveChanges();
             }
         }
 

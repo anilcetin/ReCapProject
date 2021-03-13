@@ -23,23 +23,19 @@ namespace ConsoleUI
             //UserTest();
             // ColorTest();
             //CustomerTest();
+            //RentalTest();
 
+        }
+
+        private static void RentalTest()
+        {
             DateTime dateTime = DateTime.Now;
             string sqlFormattedDate = dateTime.ToString("2021-11-20");
             RentalManager rentalManager = new RentalManager(new EfRentalDal());
-           
+
             Rental rental = new Rental() { Id = 15, CarId = 2, CustomerId = 5, ReturnDate = sqlFormattedDate };
             rentalManager.Delete(rental);
             Console.WriteLine(Messages.RentalDeleted);
-   
-            
-            
-
-
-
-
-
-
         }
 
         private static void CustomerTest()
